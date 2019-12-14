@@ -17,7 +17,7 @@ function preload() {
     pipeBotimg = loadImage('assets/pipeBottom.png');
 }
 function setup() {
-    createCanvas(400, 400);
+    createCanvas(windowWidth, windowHeight);
     gra = (0.1 / 400) * height;
     pipespeed = (3 / 400) * width;
     pipenewspeed = 60;
