@@ -1,5 +1,9 @@
 # FlappyBird-Fake
 this game will run on nodejs,chrome server,python server,...
+Chrome server:
+step 1 : install https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb/related?hl=en
+step 2 : chose gamefolder
+step 3 : clickon webserver url
 Nodejs :
     step 1 :install nodejs 
     step 1.5 : open this game folder
