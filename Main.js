@@ -28,6 +28,7 @@ function preload() {
 }
 function setup() {
     createCanvas(windowWidth, windowHeight, P2D);
+    if (!getItem("best")) storeItem("best", 0);
     gra = (0.1 / 400) * height;
     pipespeed = (3 / 400) * width;
     pipenewspeed = 60;
@@ -100,12 +101,8 @@ function gamestart() {
 
 function gameover() {
     noLoop();
-    score >= localStorage.getItem("bestpoint")
-        ? () => {
-              best = score;
-              localStorage.setItem("bestpoint", best);
-          }
-        : 1;
+    score >= getItem("best") ? (best = score) : 1;
+    storeItem("best", best);
     background(assets.images.bg);
     push();
     noStroke();
