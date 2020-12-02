@@ -6,22 +6,21 @@ class Bird {
     }
     fly() {
         this.vec.set(0, 0);
-        this.vec.add(0, (-3/400)*height);
+        this.vec.add(0, (-3 / 400) * height);
         this.pos.add(this.vec);
-        wingSfx.play();
+        assets.sfx.wing.play();
     }
     update() {
         this.pos.add(this.vec);
         this.vec.y += gra;
     }
     show() {
-        push()
-        imageMode(CENTER)
-        translate(this.pos.x, this.pos.y)
-        rotate(map(this.vec.y, -3, 6, -PI/4, PI/4))
+        push();
+        imageMode(CENTER);
+        translate(this.pos.x, this.pos.y);
+        rotate(map(this.vec.y, -3, 6, -PI / 4, PI / 4));
         // circle(0, 0, this.r) hitbox
-        image(birdimg, 0, 0, this.r, this.r);
-        pop()
+        image(assets.images.bird, 0, 0, this.r, this.r);
+        pop();
     }
 }
-
